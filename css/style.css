@@ -342,7 +342,7 @@
 }
 .container {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   min-height: 540px;
   display: flex;
   flex-direction: column;
@@ -497,10 +497,23 @@ label {
 }
 
 h1 {
+  position: relative;
+  display: inline-block;
   font-size: clamp(24px, 5vw, 32px);
   margin: 12px 0 8px;
+  padding-bottom: 8px;
   text-align: center;
   font-weight: 700;
+}
+
+h1::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f0a020, rgba(240, 160, 32, 0));
+  content: "";
 }
 
 .subtitle {
@@ -585,7 +598,7 @@ h1 {
 @media (max-width: 768px) {
   .container {
     padding: 24px 16px;
-    max-width: 420px;
+    max-width: 400px;
   }
 
   .login-form {
