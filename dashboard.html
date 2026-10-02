@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Message Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-container">
+
+        <header class="dashboard-header">
+            <div class="dashboard-intro">
+                <p class="dashboard-eyebrow">
+                    <span class="dashboard-mark" aria-hidden="true">D</span>
+                    DEKUT PORTAL <span class="eyebrow-divider">/</span> INBOX
+                </p>
+                <h1>Message Dashboard</h1>
+                <p class="dashboard-description">A clear view of every message sent your way.</p>
+                <p id="messageCount" class="message-count" aria-live="polite">0 messages</p>
+            </div>
+
+            <div class="dashboard-actions">
+                <button id="deleteSelectedBtn" class="button button-secondary" type="button">
+                    <span class="button-icon" aria-hidden="true">−</span>
+                    Delete Selected
+                </button>
+
+                <button id="clearAllBtn" class="button button-danger" type="button">
+                    <span class="button-icon" aria-hidden="true">×</span>
+                    Clear All
+                </button>
+            </div>
+        </header>
+
+        <section class="inbox-panel" aria-labelledby="inboxTitle">
+            <div class="inbox-heading">
+                <div>
+                    <h2 id="inboxTitle">Your inbox</h2>
+                    <p>Select messages to remove them from your inbox.</p>
+                </div>
+                <span class="inbox-label"><span aria-hidden="true"></span> LIVE INBOX</span>
+            </div>
+
+            <div id="messages" class="messages" aria-live="polite">
+            <p class="empty-message">
+                Loading messages...
+            </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Configuration -->
+    <script src="js/config.js"></script>
+
+    <!-- Dashboard logic -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>
