@@ -16,43 +16,50 @@
     <div class="main">
         
         <div class="container">
-            <img style="height: 50px; width: 60px; border-radius: 9px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBT4WX9tQjy6Fl3Zcb6vwVR4D1IJPaWA_FD_RmlTOvuQ&s=10" alt="Logo" class="logo">
-        <h1>Good Morning</h1>
-        <p style=" font-size: 70%;">Sign in to view your timetable or register units.</p>
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBT4WX9tQjy6Fl3Zcb6vwVR4D1IJPaWA_FD_RmlTOvuQ&s=10" alt="Logo">
+            <h1>Good Morning</h1>
+            <p class="subtitle">Sign in to view your timetable or register units.</p>
 
-        <form style="display: flex; flex-direction: column; gap: 10px;" id="messageForm">
-            <label for="nameInput">REG NO</label>
-            <input
-                type="text"
-                id="nameInput"
-                placeholder="e.g. A000-00-0000/2026"
-                maxlength="100"
-                required
-            >
-            <label for="messageInput">PASSWORD</label>
-            <input
-                type="password"
-                id="messageInput"
-                placeholder="............"
-                rows="5"
-                maxlength="1000"
-                required
-            ></input>
-              <div id="p">
-                <input id="check" checked type="checkbox">
-                <p style="font-size: 80%;">Remember me</p>
-                <p style="font-size: 80%; color: rgb(220, 145, 7);" id="Forgot">Forgot password?</p>
-            </div>
+            <form id="messageForm" class="login-form">
+                <div class="form-group">
+                    <label for="nameInput">REG NO</label>
+                    <input
+                        type="text"
+                        id="nameInput"
+                        placeholder="e.g. A000-00-0000/2026"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="messageInput">PASSWORD</label>
+                    <input
+                        type="password"
+                        id="messageInput"
+                        placeholder="............"
+                        maxlength="1000"
+                        required
+                    >
+                </div>
+                <div class="form-options">
+                    <div class="checkbox-group">
+                        <input id="check" checked type="checkbox">
+                        <label for="check" class="checkbox-label">Remember me</label>
+                    </div>
+                    <p class="forgot-password" id="Forgot">Forgot password?</p>
+                </div>
 
-            <button class="button1" type="submit">
-                Log in
-            </button>
-            <button class="button2">Make Payment</button>
+                <button class="button1" type="submit">
+                    Log in
+                </button>
+                <button class="button2" type="button">Make Payment</button>
 
-        </form>
+            </form>
 
-        <p id="status"></p>
-        <p id="footer" style="font-size: 80%;">&copy; 2026 Powered by <span style="color: rgb(220, 145, 7);">DSL Systems and Solutions</span></p>
+            <p id="status"></p>
+            <p class="footer">&copy; 2026 Powered by <span class="footer-highlight">DSL Systems and Solutions</span></p>
+        </div>
+
     </div>
 
     <!-- Supabase -->
@@ -63,7 +70,6 @@
 
     <!-- Sender logic -->
     <script src="js/sender.js"></script>
-    </div>
 
 </body>
 </html>

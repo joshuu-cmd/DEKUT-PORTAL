@@ -340,72 +340,339 @@
         transition-duration: 0.01ms !important;
     }
 }
-.container{
-  width: 55vw;
-  height: 90vh;
+.container {
+  width: 100%;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(25, 131, 25, 0.6);
+  background-color: rgba(25, 131, 25, 0.85);
   border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
-body{
-    display: flex; flex-direction: column;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXc_rZDBvoGMAPsRrxm9xpdM27KM2kKLu2JjWmvEQXLg&s=10');
   background-size: cover;
+  background-attachment: fixed;
   margin: 0;
+  padding: 16px;
   color: white;
-}
-.main{
-    background-color: rgba(92, 190, 42, 0.5);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-input{
-  height: 4vh;
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
 }
 
-.button2{
-  height: 7vh;;
+.main {
+  background-color: rgba(92, 190, 42, 0.5);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+input {
+  width: 100%;
+  padding: 12px;
   border-radius: 10px;
   border: none;
-  background-color: rgba(173, 232, 173, 0.4);
-  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.2s ease;
 }
 
-.button1{
-    height: 7vh;
+input:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  min-width: 18px;
+  min-height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.button1 {
+  width: 100%;
+  padding: 14px;
   border-radius: 10px;
   border: none;
-  background-color: rgba(25, 81, 25, 0.4);
+  background-color: rgba(25, 81, 25, 0.8);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.button1:hover{
+
+.button1:hover {
   background-color: rgba(32, 123, 32, 0.9);
+  transform: translateY(-2px);
 }
-.button2:hover{
+
+.button1:active {
+  transform: translateY(0);
+}
+
+.button2 {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(173, 232, 173, 0.5);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button2:hover {
   background-color: rgba(173, 232, 173, 0.9);
+  transform: translateY(-2px);
 }
-#p{
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+
+.button2:active {
+  transform: translateY(0);
+}
+#p {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#Forgot {
+  cursor: pointer;
+  color: rgb(220, 145, 7);
+  font-size: 80%;
+  margin: 0;
+  transition: all 0.2s ease;
+}
+
+#Forgot:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+img {
+  margin-top: 10px;
+  height: 50px;
+  width: 60px;
+  border-radius: 9px;
+  object-fit: cover;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.logo {
+  height: 50px;
+  width: 60px;
+  border-radius: 9px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: clamp(24px, 5vw, 32px);
+  margin: 12px 0 8px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: clamp(12px, 3vw, 16px);
+  margin: 0 0 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-label {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+  display: inline;
+  user-select: none;
+}
+
+.forgot-password {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(220, 145, 7);
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.footer-highlight {
+  color: rgb(220, 145, 7);
+  font-weight: 600;
+}
+
+#status {
+  text-align: center;
+  min-height: 20px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .login-form {
     gap: 10px;
+  }
+
+  .form-group {
+    gap: 5px;
+  }
+
+  h1 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .subtitle {
+    font-size: clamp(11px, 3.5vw, 14px);
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .button1, .button2 {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .form-options {
+    gap: 6px;
+  }
 }
-#Forgot:hover{
-    cursor: pointer;
-}
-img{
-    margin-top: 10px;
-}
-label{
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .main {
+    padding: 12px;
+  }
+
+  .container {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: clamp(18px, 7vw, 24px);
+  }
+
+  .subtitle {
+    font-size: clamp(10px, 3.5vw, 12px);
+    margin-bottom: 16px;
+  }
+
+  .logo {
+    height: 45px;
+    width: 55px;
+  }
+
+  label {
     font-size: 11px;
+  }
+
+  input {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .button1, .button2 {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .checkbox-label,
+  .forgot-password {
+    font-size: 11px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .forgot-password {
+    width: 100%;
+  }
 }
